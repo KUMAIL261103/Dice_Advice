@@ -6,10 +6,11 @@ const Display = (props) => {
     const [isClicked, setIsClicked] = useState(false);
     const [count, setCount] = useState(0);
     const displayFunction = ()=>{
-            setCount((prevCount) => prevCount + 1);
-            // if(count%2!==0){
-            //     settextdisplay("Hide")
-            // }
+            setCount((count) => count + 1);
+            if(count===-1){
+                
+                console.log(",");
+            }
             setIsClicked((prevIsClicked) => !prevIsClicked);
             if(isClicked===false){
                 settextdisplay("Hide");
