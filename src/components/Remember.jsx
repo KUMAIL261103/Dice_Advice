@@ -16,7 +16,7 @@ const Remember = (props) => {
    
 
         setData((prevData) => [...prevData, obj]);
-        console.log(data);
+        
     
   };
  

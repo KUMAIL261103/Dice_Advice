@@ -7,17 +7,21 @@
 .App {
   text-align: center;
 }
-
+body{
+  background-color: #ee4d349e;
+}
 
 .container{
   min-height:30vh;
   min-width:20vw;
-  max-width: 50vw;
+  max-width: 50vh;
+  max-height: 200vh;
   border-radius: 10px;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
   background-color: #f6e0b5;
  
 }
@@ -42,11 +46,12 @@ p:last-of-type{
   font-family:  cursive;
   
   
-  font-size: 25px;
+  font-size: 2vw;
 }
 p:first-of-type{
   text-align: center;
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 1vw;
   margin-bottom: 40px;
   color:#66545e;
   font-family: cursive;
@@ -61,13 +66,13 @@ p:first-of-type{
 }
 
 .remember{
-  width:100px;
+  width:12vw;
   height:30px;
   background-color:#66545e ;
   color:antiquewhite;
   border:none;
   margin: 10px;
-  font-size: 15px;
+  font-size: 1.2vw;
     border-radius: 5px;
 }
 .remember:hover{
@@ -91,9 +96,9 @@ li{
 }
 
 .display{
-  width: 150px;
+  width: 15vw;
     height: 30px;
-    font-size: 15px;
+    font-size: 1.2vw;
     background-color: #66545e;
     color: antiquewhite;
     border:none;
@@ -109,8 +114,8 @@ li{
   align-items: center;
   width:100vw;
   height: 100vh;
+ 
   background-color: #ee4d349e;
-  background-color: #cd412c9e;
   
 }
 .designDash{
