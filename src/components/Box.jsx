@@ -8,6 +8,23 @@ const Box = () => {
     const [number,setnumber]= useState(1);
     
     const [quote, setQuote] = useState("Roll The Die in the game of destiny and unveil the divine guidance ");
+     const TextToSpeech = () => {
+    const synth = window.speechSynthesis;
+
+    const speak = () => {
+      if (synth.speaking) {
+        console.error('SpeechSynthesisUtterance is already speaking');
+        return;
+      }
+
+      if (quote !== '') {
+        const utterance = new SpeechSynthesisUtterance(quote);
+        synth.speak(utterance);
+      }
+    };
+
+    return speak;
+  };
 
     const [isExpanded, setIsExpanded] = useState(false);
     const fetchData = ()=>{
@@ -16,6 +33,7 @@ const Box = () => {
         fetch(`https://api.adviceslip.com/advice/${number}`)
         .then((response) => response.json())
         .then((data) => {
+           
             setQuote(data.slip.advice);
             
         })
@@ -44,8 +62,9 @@ const Box = () => {
             <img src={design} alt="------" className="designDash"/>
 
             <img src={icon} alt="$" className="button" style={imgStyle} onClick={fetchData}/>
-
+            <button onClick={TextToSpeech({quote})} className="speak">Speak</button>
             <Remember id={number-1} quote={quote}/>
+            
             
         </div>
      );

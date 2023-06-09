@@ -32,7 +32,16 @@ body{
   box-shadow: none;
   transition: box-shadow 0.3s ease;
 }
-
+.speak{
+  width: 12vw;
+    height: 30px;
+    background-color: #66545e;
+    color: antiquewhite;
+    border: none;
+    margin: 10px;
+    font-size: 1.2vw;
+    border-radius: 5px;
+}
 .container:hover {
   
   box-shadow: 0 4px 8px 0 rgba(250, 235, 215, 0.44), 0 6px 20px 0 rgba(250, 235, 215, 0.456);
